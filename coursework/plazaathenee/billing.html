@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Billing|Plaza Athenee</title>
+
+        <link rel = "stylesheet" type = "text/css" href = "design.css">
+        <link rel="icon" href="plazalogo.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <h1> <img src = "plazalogo.png">PLAZA ATHENEE</h1>
+            <h4>Paris, France</h4>
+        </header>
+        
+        <section>
+            <div class = "topnav">
+                <a href = "home.html">Home</a>
+                <a href = "addroom.html">Add Room</a>
+                <a href = "updateroom.html">Update Room</a>
+                <a href = "deleteroom.html">Delete Room</a>
+                <a href = "bookroom.html">Book Room</a>
+                <a class = "active" href = "billing.html">Billing</a>
+                <a href = "bookedroomsdata.php">Booked Rooms</a>
+            </div>
+        </section>
+
+        <br><br>
+
+        <!--form to generate bill-->
+        <form action = "billing.php" method = "POST"> 
+            <div class="form-group">
+                <label>Customer Name:</label>
+                <input type="text" id="txtrcustName" required> <!--should fill mandatorily-->
+            </div>
+            
+            <br>
+            
+            <div class="form-group">
+                <label for="roomtype">Room Type:</label> <!--dropdown for room-->
+
+                <select id="roomtype" name="roomtype" placeholder="Enter Room Number" required>
+                    <option value="3500">Deluxe Suite - $3500</option>
+                    <option value="3600">Junior Suite - $3600</option>
+                    <option value="3800">Presidential Suite - $3800</option>
+                    <option value="4000">Prestige Suite - $4000</option>
+                    <option value="4200">Superior Suite - $4200</option>
+                </select>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label>Number of Nights:</label>
+                <input type="number" id="txtnoOfnight" min="1" required>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label>Additional Services:</label>
+                <label><input type="checkbox" id="breakfast" value="20"> Breakfast - $20</label>
+                <label><input type="checkbox" id="lunch" value="30"> Lunch - $30 </label>
+                <label><input type="checkbox" id="dinner" value="40"> Dinner - $40 </label>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label>Discount (%):</label>
+                <input type="number" id="txtdiscount" min="0" max="100" value="0">
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label>Tax (%):</label>
+                <input type="number" id="txttax" min="0" max="100" value="10">
+            </div>
+            
+            <br>
+
+            <button type="button" id="generateBill">Generate Bill</button>
+        </form>
+
+        <br><br>
+        
+        <!--to display the invoice-->
+        <div id="invoice">
+            <div id="invoiceHeader">
+                <p>Invoice No: <span id="invoiceNo"></span></p>
+                <p>Date: <span id="invoiceDate"></span></p>
+            </div>
+
+            <h2>Invoice</h2>
+
+            <center>
+            <table border="1" cellspacing="0" cellpadding="8" style="width: 75%; text-align: left; border-collapse: collapse;">
+                
+                <!--table with invoice details-->
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Customer Name</td>
+                        <td id="customer"></td> <!--placeholder-->
+                    </tr>
+                    <tr>
+                        <td>Room Details</td>
+                        <td id="roomDetails"></td>
+                    </tr>
+                    <tr>
+                        <td>Additional Services</td>
+                        <td id="services"></td>
+                    </tr>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td id="taxAmount"></td>
+                    </tr>
+                    <tr>
+                        <td>Discount</td>
+                        <td id="discountAmount"></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td id="totalAmount"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            </center>
+
+            <button id="printBill">Print Bill</button>
+        </div>
+        
+        <script src="scriptbilling.js"></script> <!--JavaScript for billing-->
+
+        <footer>
+            <p class = "footer"><b>25 Av. Montaigne, 75008 Paris, France</b>
+            <br><br>
+            <b>Find Us: </b> 
+            <br><br>
+            <b>Instagram</b><a class = "link" href ="https://www.instagram.com/plaza_athenee/">  Hôtel Plaza Athénée</a></p>
+          </footer>
+
+    </body>
+</html>

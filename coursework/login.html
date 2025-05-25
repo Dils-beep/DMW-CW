@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Book Room|Plaza Athenee</title>
+
+        <link rel = "stylesheet" type = "text/css" href = "designcw.css">
+        <link rel="icon" href="plazalogo.png" type="image/x-icon">
+
+        <style> /*internal styling for the login form*/
+            .login-container {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+                margin: auto;
+                margin-top: 2%;
+                text-align: center;
+            }
+            
+            .login-container h2 { /*form heading*/
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            
+            .login-container .input-group { /*input groups*/
+                margin-bottom: 15px;
+                text-align: left;
+            }
+            
+            .login-container .input-group label { /*labels of input groups*/
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            
+            .login-container .input-group input { /*input fields*/
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            
+            .login-container button { /*login button*/
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: rgb(81, 14, 16);
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+            .login-container button:hover { /*hover effect for login button*/
+                background-color: rgb(189, 53, 69);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1> <img src = "plazalogo.png">PLAZA ATHENEE</h1>
+            <h4>Paris, France</h4>
+        </header>
+          
+        <section>
+            <div class = "topnav">
+                <a class = "active" href = "login.html">Login</a>
+                <a href = "homelog.html">Home</a>
+            </div>
+        </section>
+
+        <br><br>
+
+   
+        <div class="login-container"> <!--login form-->
+            <h2>Login</h2> <!--form title-->
+
+            <div class="error" id="error"></div> <!--error message placeholder-->
+
+            <div class="input-group"> <!--username-->
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+
+            <div class="input-group"> <!--password-->
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+
+            <button class="btn" onclick="login()">Login</button> 
+        </div>
+  
+        <script src="login.js"></script> <!--external JavaScript file-->
+
+        <br><br>
+
+        <footer>
+            <p class = "footer"><b>25 Av. Montaigne, 75008 Paris, France</b>
+            <br><br>
+            <b>Find Us: </b> 
+            <br><br>
+            <b>Instagram</b><a class = "link" href ="https://www.instagram.com/plaza_athenee/">  Hôtel Plaza Athénée</a></p>
+          </footer>
+
+    </body>
+</html>

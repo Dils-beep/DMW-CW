@@ -1,0 +1,322 @@
+body{
+    margin: 0; /*remove default margin*/
+    background-image: url("plaza.jpg"); 
+    background-size: cover; /*cover the entire page*/
+    background-position: center; /*center background image*/
+    background-repeat: no-repeat; /*prevent repeating background*/
+    background-attachment: fixed; /*fix background when scrolling*/
+    min-height: 100vh; /*ensure full viewport height*/
+}
+
+header{
+    font-size: 18pt;
+    padding: 2px 8px; /*add padding*/
+    background-color:rgba(255, 255, 255, 0.7); /*semi-transparent background*/
+    text-align: center;
+    flex-direction: column; /*arrange elements vertically*/
+    align-items: center; /*center content horizontally*/
+    justify-content: center; /*center content vertically*/
+}
+
+header h1 {
+    display: inline-flex;  /* Align image and text horizontally */
+    align-items: center;   /* Vertically align the image and text */
+    font-size: 80px; 
+}
+
+header h1 img{
+    width: 100px; /* set image width */
+    height: auto; /*auto adjust height*/
+    margin-right: 20px; /* Space between image and the text */
+    align-items: center;
+}
+
+header h4 {
+    margin-top: -60px; /*adjust top margin*/
+    align-items: center; 
+    margin-bottom: 40px; /*add bottom margin*/
+    font-size: 30px;
+}
+
+.topnav{
+    overflow: hidden; /*prevent overflow*/
+    background-color: rgb(81, 14, 16);
+}
+
+.topnav a{
+    color : #f2f2f2;
+    padding: 20px 25px;
+    text-align: center;
+    font-size:25px;
+    text-decoration: none; /*remove underline*/
+}
+
+.topnav a:hover{
+    background-color: rgb(189, 53, 69);
+    color: white; /*change text color when hover*/
+}
+
+table{
+    margin-top: 50;
+    margin-bottom: 50;
+    margin-left: 50;
+    margin-right: 50;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.container{
+    display: flex; /*use flexbox layout*/
+    justify-content: center; 
+    align-items: center;
+    height: 20vh; /*set height*/
+    border-radius: 10px; /* Rounded corners */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; 
+    justify-content: center; 
+    margin: auto; /* Center the form on the page */
+    padding: 20px;
+    width: 80%; /* set width */
+    max-width: 600px; /* limit max width */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow*/
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column; /* Arrange label and input vertically */
+    width: 100%; /* Full width*/
+    margin-bottom: 15px; /* Add spacing between fields */
+}
+
+form .form-group label {
+    font-weight: bold; /*make lable text bold*/
+    margin-bottom: 5px; /*add space below label*/
+}
+
+form .form-group input, form .form-group select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%; 
+    border: 1px solid #ccc; /*set border*/
+    border-radius: 5px; /*rounded corners*/
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.form-group label {
+    display: flex;
+    align-items: center; /* Vertically align checkbox and text */
+    margin-bottom: 5px; /*add space between lables*/
+    gap: 5px; /*add space between checkbox and text*/
+}
+
+.form-group input[type="checkbox"] {
+    margin: 0; /*remove extra margin*/
+    width: 16px; /*checbox width*/
+    height: 16px; /*checkbox height*/
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(81, 14, 16);
+    color: white;
+    border: none; /*remove border*/
+    border-radius: 5px;
+    cursor: pointer; /*change cursor to pointer*/
+    margin-top: 20px; /*add top margin*/
+}
+
+form button:hover {
+    background-color: rgb(189, 53, 69);
+}
+
+form .form-group input:focus, form .form-group select:focus {
+    border-color: #6e0f0f; /*change border color on focus*/
+    outline: none; /*remove outline*/
+    box-shadow: 0px 0px 5px rgba(110, 15, 15, 0.5); /*shadow on focus*/
+}
+
+.plaza{
+    margin-top: 50;
+    margin-bottom: 50;
+    margin-left: 50;
+    margin-right: 50;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.about{
+    font-size: 60px;
+}
+
+.details{
+    font-size: 20px;
+}
+
+.container{
+    margin-top: 50;
+    margin-bottom: 50;
+    margin-left: 50;
+    margin-right: 50;
+    padding: 200px;
+    background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.image {
+    width: 500px; /*image width*/
+    height: 300px; /*image height*/
+    object-fit: cover; /*ensure image covers area*/
+}
+
+.carousel {
+    margin-top: 10;
+    margin-bottom: 10;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative; /*set position*/
+    width: 600px;
+    overflow: hidden; /*hide overflow*/
+    margin: auto; /*center carousel*/
+    z-index: 1; /*send carousel behind other elements*/
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1.0s ease; /*smooth transition for sliding*/
+}
+
+.carousel-images img {
+    width: 600px; /* Match carousel width */
+    height: auto; /*auto adjust height*/
+}
+
+.prev{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none; /*remove border*/
+    font-size: 24px; 
+    cursor: pointer;
+    padding: 10px 20px;
+    left: 10px; /*position left*/
+}
+
+.next{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    right: 10px;
+}
+
+footer{
+    padding: 40px;
+    background-color: #6e0f0f
+}
+
+.footer{
+    color: white; 
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.link{
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif; /*set font family*/
+}
+
+.title{
+    font-size: 50px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+#invoiceHeader{
+    text-align: center; /*center header text*/
+    margin-bottom: 20px; /*add space below header*/
+}
+#invoice {
+    margin-top: 20px;
+    display: none; /*hide invoice initially*/
+    text-align: center; /*center invoice content*/
+    margin-bottom: 50;
+    margin-left: 50;
+    margin-right: 50;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+  }
+  
+  @media print {
+    /* General Reset for printing*/
+    body * {
+        visibility: hidden; /* Hide all elements initially */
+    }
+
+    @page {
+        size: A4;
+        margin: 15mm; /* Reduce margin*/
+        page-break-inside: avoid;
+    }
+
+    header { 
+        visibility: visible; /*make header visible*/
+        width: 100%;
+        background-color: white;
+        position: relative; /* Remove the fixed positioning */
+        z-index: 10; /* Ensure header stays on top */
+        margin-bottom: 10mm; /* Add space below header */
+        page-break-inside: avoid; /*prevent page break after header*/
+    }
+
+    header h1, header h1 img, header h4 {
+        visibility: visible; /*make title, image, subtitle visible*/
+    }
+
+    #invoice, #invoice * {
+        visibility: visible; /*make invoice and its elements visible*/
+    }
+
+    #invoiceHeader {
+        visibility: visible; /*make invoice header visible*/
+    }
+
+
+    #invoice {
+        position: relative;
+        margin-top: 10mm; /* add space above the header */
+        left: 50%; /*center invoice horizontally*/
+        transform: translateX(-50%); /*adjust position to center*/
+        width: 210mm; /* A4 width */
+        height: auto;
+        padding: 20px;
+        background: white;
+        box-sizing: border-box; /*include padding in total width and height*/
+        page-break-inside: avoid; /* Prevent page break inside invoice */
+    }
+    
+    button {
+        display: none; /*hide buttons*/
+    }
+
+    table, th, td {
+        border: 1px solid black; /*print table with borders*/
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px; /*add padding to cells*/
+        text-align: left; /*align table text to right*/
+    }
+}

@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Book Room|Plaza Athenee</title>
+
+        <link rel = "stylesheet" type = "text/css" href = "design.css">
+        <link rel="icon" href="plazalogo.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <h1> <img src = "plazalogo.png">PLAZA ATHENEE</h1>
+            <h4>Paris, France</h4>
+        </header>
+          
+        <section>
+            <div class = "topnav">
+                <a href = "home.html">Home</a>
+                <a href = "addroom.html">Add Room</a>
+                <a href = "updateroom.html">Update Room</a>
+                <a href = "deleteroom.html">Delete Room</a>
+                <a class = "active" href = "bookroom.html">Book Room</a>
+                <a href = "billing.html">Billing</a>
+                <a href = "bookedroomsdata.php">Booked Rooms</a>
+            </div>
+        </section>
+
+        <br><br>
+
+        <!--form to book a room-->
+        <form action="bookroom.php" method="POST">
+            <div class="form-group">
+                <label for="customername">Customer Name:</label>
+                <input type="text" id="customername" name="customername" required>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label for="customercontact">Customer Contact:</label> 
+                <input type="text" id="customercontact" name="customercontact" required>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label for="customernic">Customer NIC:</label> 
+                <input type="text" id="customernic" name="customernic" required>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label for="roomnum">Room Number:</label> 
+                <input type="number" id="roomnum" name="roomnum" required>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label for="roomtype">Room Type:</label> 
+            
+                <select id="roomtype" name="roomtype" required>
+                    <option value="Deluxe Suite">Deluxe Suite</option>
+                    <option value="Junior Suite">Junior Suite</option>
+                    <option value="Presidential Suite">Presidential Suite</option>
+                    <option value="Prestige Suite">Prestige Suite</option>
+                    <option value="Superior Suite">Superior Suite</option>
+                </select>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label> 
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+            
+            <br>
+
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label> 
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+            
+            <br>
+
+            <!--submit button for booking-->
+            <p>
+                <input type="submit" value="Book Room">
+            </p>
+
+        </form>
+        
+        <footer>
+            <p class = "footer"><b>25 Av. Montaigne, 75008 Paris, France</b>
+            <br><br>
+            <b>Find Us: </b> 
+            <br><br>
+            <b>Instagram</b><a class = "link" href ="https://www.instagram.com/plaza_athenee/">  Hôtel Plaza Athénée</a></p>
+        </footer>
+
+    </body>
+</html>

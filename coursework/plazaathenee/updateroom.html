@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Update Room|Plaza Athenee</title>
+
+        <link rel = "stylesheet" type = "text/css" href = "design.css">
+        <link rel="icon" href="plazalogo.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <header>
+            <h1> <img src = "plazalogo.png">PLAZA ATHENEE</h1>
+            <h4>Paris, France</h4>
+        </header>
+          
+        <section>
+            <div class = "topnav">
+                <a href = "home.html">Home</a>
+                <a href = "addroom.html">Add Room</a>
+                <a class = "active" href = "updateroom.html">Update Room</a>
+                <a href = "deleteroom.html">Delete Room</a>
+                <a href = "bookroom.html">Book Room</a>
+                <a href = "billing.html">Billing</a>
+                <a href = "bookedroomsdata.php">Booked Rooms</a>
+            </div>
+        </section>
+
+        <br><br>
+        
+        <!--form to update rom-->
+        <form action = "updateroom.php" method = "POST">
+            <div class="form-group">
+            <label> Room Number: </label>
+            <input type = "text" name = "txtrnumber">
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+            <label>Room Type:</label>
+
+            <select name="roomtype" required> <!--option to select room type-->
+            <option value="Deluxe Suite">Deluxe Suite</option>
+            <option value="Junior Suite">Junior Suite</option>
+            <option value="Presidential Suite">Presidential Suite</option>
+            <option value="Prestige Suite">Prestige Suite</option>
+            <option value="Superior Suite">Superior Suite</option>
+            </select>
+        </div>
+        
+        <br>
+
+        <div class="form-group">
+            <label>Price Per Night: </label>
+            <input type = "number" name = "txtppnight">
+        </div>
+        
+        <br>
+
+            <input type = "submit" value = "Update Room"> <!--update data in the table-->
+        </form>
+
+        <br><br>
+
+        <footer>
+            <p class = "footer"><b>25 Av. Montaigne, 75008 Paris, France</b>
+            <br><br>
+            <b>Find Us: </b> 
+            <br><br>
+            <b>Instagram</b><a class = "link" href ="https://www.instagram.com/plaza_athenee/">  Hôtel Plaza Athénée</a></p>
+          </footer>
+
+        <br><br>
+
+    </body>
+</html>
